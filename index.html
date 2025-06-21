@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudio Capobianco | Asesoría Integral y Blog para empresas</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="bg-white shadow-sm py-4 z-50 fixed w-full top-0">
+      <nav class="container mx-auto px-4 flex justify-between items-center">
+        <a href="#" class="h-16 md:h-18 flex items-center">
+          <!-- Logo that changes for mobile menu -->
+          <img
+            id="header-logo"
+            src="./assets/img/logo-o-apaisado.png"
+            alt="Estudio Capobianco Logo"
+            class="h-full object-contain"
+          />
+        </a>
+        <!-- Adjusted alignment: Added items-center to align links and button vertically -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a
+            href="#servicios"
+            class="text-slate-600 hover:text-sky-700 font-medium py-2"
+            >Servicios</a
+          >
+          <a
+            href="#nosotros"
+            class="text-slate-600 hover:text-sky-700 font-medium py-2"
+            >Nosotros</a
+          >
+          <a
+            href="#beneficios"
+            class="text-slate-600 hover:text-sky-700 font-medium py-2"
+            >Beneficios</a
+          >
+          <a
+            href="#clientes"
+            class="text-slate-600 hover:text-sky-700 font-medium py-2"
+            >Clientes</a
+          >
+          <a
+            href="#blog"
+            class="text-slate-600 hover:text-sky-700 font-medium py-2"
+            >Blog</a
+          >
+          <a
+            href="#contacto"
+            class="px-5 py-2 bg-custom-orange text-white rounded-lg hover:bg-custom-orange-dark transition duration-300 shadow-md"
+            >Contacto</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button
+            id="hamburger-menu-button"
+            class="text-slate-600 hover:text-sky-700 focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="mobile-menu-overlay"></div>
+
+    <div id="mobile-menu" class="md:hidden">
+      <span id="mobile-menu-close">&times;</span>
+      <nav class="flex flex-col items-start p-6 space-y-4">
+        <a
+          href="#servicios"
+          class="text-slate-700 hover:text-sky-700 font-medium text-lg mobile-menu-link"
+          >Servicios</a
+        >
+        <a
+          href="#nosotros"
+          class="text-slate-700 hover:text-sky-700 font-medium text-lg mobile-menu-link"
+          >Nosotros</a
+        >
+        <a
+          href="#beneficios"
+          class="text-slate-700 hover:text-sky-700 font-medium text-lg mobile-menu-link"
+          >Beneficios</a
+        >
+        <a
+          href="#clientes"
+          class="text-slate-700 hover:text-sky-700 font-medium text-lg mobile-menu-link"
+          >Clientes</a
+        >
+        <a
+          href="#blog"
+          class="text-slate-700 hover:text-sky-700 font-medium text-lg mobile-menu-link"
+          >Blog</a
+        >
+        <a
+          href="#contacto"
+          class="w-full px-5 py-2 bg-custom-orange text-white rounded-lg hover:bg-custom-orange-dark transition duration-300 shadow-md text-center mobile-menu-link"
+          >Contacto</a
+        >
+      </nav>
+    </div>
+
+    <main>
+      <section
+        class="bg-gradient-to-r from-sky-800 to-sky-600 text-white py-16 md:py-20 px-4 text-center flex flex-col justify-center items-center"
+        style="min-height: calc(100vh - 96px)"
+      >
+        <div class="container mx-auto section-content-container">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down"
+          >
+            Gestión Integral de Nómina y RRHH
+          </h1>
+          <p
+            class="text-lg md:text-xl mb-8 opacity-90 animate-fade-in-up readable-paragraph"
+          >
+            Expertise Contable y Estratégica de Capital Humano para su
+            tranquilidad y crecimiento.
+          </p>
+          <a
+            href="#contacto"
+            class="inline-block bg-custom-orange text-white font-bold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-custom-orange-dark transition duration-300 transform hover:scale-105"
+          >
+            Obtenga una Consulta Gratuita
+          </a>
+        </div>
+      </section>
+
+      <section id="servicios" class="py-16 md:py-20 px-4 bg-slate-50">
+        <div class="container mx-auto section-content-container text-center">
+          <h2 class="text-3xl font-bold text-custom-orange mb-10 md:mb-12">
+            Nuestros Servicios Estratégicos
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-5xl mb-4 text-custom-orange">🧮</div>
+              <h3 class="text-xl font-bold mb-3 text-slate-800">
+                Liquidación de Sueldos y Cargas Sociales
+              </h3>
+              <p class="text-slate-600 readable-paragraph">
+                Precisión y cumplimiento en cada cálculo. Gestionamos su nómina
+                de forma eficiente, asegurando el cumplimiento de la normativa
+                argentina y optimizando sus costos laborales.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-5xl mb-4 text-indigo-600">⚖️</div>
+              <h3 class="text-xl font-bold mb-3 text-slate-800">
+                Asesoría Laboral y Prevención de Litigios
+              </h3>
+              <p class="text-slate-600 readable-paragraph">
+                Mitigue riesgos. Le brindamos asesoramiento experto para
+                prevenir conflictos, garantizar el marco legal de sus relaciones
+                laborales y proteger su empresa de costosos litigios.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+            >
+              <div class="text-5xl mb-4 text-purple-600">📈</div>
+              <h3 class="text-xl font-bold mb-3 text-slate-800">
+                Gestión Estratégica de Recursos Humanos
+              </h3>
+              <p class="text-slate-600 readable-paragraph">
+                Potencie su capital humano. Desarrollamos estrategias para
+                atraer, retener y motivar a su equipo, mejorando la
+                productividad y el clima organizacional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="py-16 md:py-20 px-4 bg-white">
+        <div class="container mx-auto section-content-container text-center">
+          <h2 class="text-3xl font-bold text-custom-orange mb-10 md:mb-12">
+            ¿Por Qué Elegir Estudio Capobianco?
+          </h2>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-left"
+          >
+            <div class="md:pr-8">
+              <h3 class="text-2xl font-bold mb-4 text-slate-800">
+                La Sinergia que su empresa Necesita
+              </h3>
+              <p class="text-lg text-slate-600 mb-4 readable-paragraph">
+                En Estudio Capobianco, fusionamos dos pilares esenciales para el
+                éxito de su negocio: la precisión contable y la estrategia de
+                capital humano.
+              </p>
+              <p class="text-slate-600 leading-relaxed readable-paragraph">
+                Nuestra fundadora Verónica Capobianco, contadora especializada
+                en el area laboral, con más de 15 años de experiencia, asegura
+                la rigurosidad en la liquidación de sueldos y cargas sociales,
+                garantizando el cumplimiento normativo y la optimización fiscal.
+                Complementariamente, nuestra socia Licenciada en Recursos
+                Humanos, Camila Kacic, de 32 años, aporta una visión moderna y
+                estratégica para la gestión del talento, la cultura
+                organizacional y la prevención de riesgos laborales.
+              </p>
+              <p class="text-slate-600 leading-relaxed mt-4 readable-paragraph">
+                Esta combinación única nos permite ofrecer soluciones integrales
+                que no solo cumplen con la normativa, sino que también impulsan
+                la productividad y protegen la estabilidad de su empresa en el
+                dinámico entorno económico argentino.
+              </p>
+            </div>
+            <div
+              class="bg-sky-50 p-6 rounded-xl shadow-lg border border-sky-200"
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  src="./assets/img/veronica.png"
+                  alt="Verónica Capobianco"
+                  class="h-20 w-20 rounded-full object-cover mr-4 border-2 border-sky-600"
+                />
+                <div>
+                  <p class="font-bold text-lg text-sky-800">
+                    Verónica Capobianco
+                  </p>
+                  <p class="text-slate-600">
+                    Contadora Pública, Especialista en Nómina y Cargas Sociales.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="./assets/img/camila.png"
+                  alt="Camila Kacic"
+                  class="h-20 w-20 rounded-full object-cover mr-4 border-2 border-purple-600"
+                />
+                <div>
+                  <p class="font-bold text-lg text-purple-800">Camila Kacic</p>
+                  <p class="text-slate-600">
+                    Licenciada en Recursos Humanos, Experta en Gestión de
+                    Talento y Desarrollo Organizacional.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios" class="py-16 md:py-20 px-4 bg-slate-50">
+        <div class="container mx-auto section-content-container text-center">
+          <h2 class="text-3xl font-bold text-custom-orange mb-10 md:mb-12">
+            Beneficios Clave para su empresa
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg border border-slate-200"
+            >
+              <div class="flex items-center mb-3">
+                <div class="text-2xl text-green-600 mr-3">✅</div>
+                <h3 class="text-xl font-semibold text-slate-800">
+                  Cumplimiento Normativo Garantizado
+                </h3>
+              </div>
+              <p class="text-slate-600 readable-paragraph">
+                Le mantenemos actualizado y en cumplimiento con las últimas
+                leyes laborales y fiscales argentinas, evitando multas y
+                sanciones.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg border border-slate-200"
+            >
+              <div class="flex items-center mb-3">
+                <div class="text-2xl text-red-600 mr-3">🛡️</div>
+                <h3 class="text-xl font-semibold text-slate-800">
+                  Reducción de Riesgos y Litigios
+                </h3>
+              </div>
+              <p class="text-slate-600 readable-paragraph">
+                Nuestra asesoría preventiva minimiza la exposición a litigios
+                laborales costosos, protegiendo la salud financiera de su
+                empresa.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg border border-slate-200"
+            >
+              <div class="flex items-center mb-3">
+                <div class="text-2xl text-blue-600 mr-3">💰</div>
+                <h3 class="text-xl font-semibold text-slate-800">
+                  Optimización de Costos Laborales
+                </h3>
+              </div>
+              <p class="text-slate-600 readable-paragraph">
+                Analizamos y aplicamos estrategias para reducir eficientemente
+                sus cargas sociales y salariales, maximizando su rentabilidad.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg border border-slate-200"
+            >
+              <div class="flex items-center mb-3">
+                <div class="text-2xl text-yellow-600 mr-3">🚀</div>
+                <h3 class="text-xl font-semibold text-slate-800">
+                  Aumento de Productividad y Clima Laboral
+                </h3>
+              </div>
+              <p class="text-slate-600 readable-paragraph">
+                Con una gestión de RRHH estratégica, su equipo estará más
+                motivado y productivo, impactando positivamente en el
+                rendimiento general.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clientes" class="py-16 md:py-20 px-4 bg-white">
+        <div class="container mx-auto section-content-container text-center">
+          <h2 class="text-3xl font-bold text-custom-orange mb-10 md:mb-12">
+            Lo que Dicen Nuestros Clientes
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-slate-50 p-6 rounded-xl shadow-lg border border-slate-200 text-left testimonial-card"
+            >
+              <div>
+                <div class="flex items-center mb-4">
+                  <span class="text-xl text-yellow-500">★★★★★</span>
+                  <p class="ml-2 text-slate-600 font-medium">
+                    Un socio estratégico insuperable
+                  </p>
+                </div>
+                <p
+                  class="italic text-lg text-slate-700 mb-4 readable-paragraph"
+                >
+                  “Hace ya dos años que trabajamos codo a codo con Estudio
+                  Capobianco para gestionar la nómina de tres empresas. La
+                  agilidad y profesionalismo con el que trabajan asi como el
+                  asesoramiento y adaptabilidad a nuestras necesidades hacen que
+                  día a día volvamos a elegirlos. Sin dudas los recomendamos.”
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/natalia-hirmbruchner-79534810b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-slate-800 hover:text-blue-600 transition duration-300 block"
+                  >- Natalia Hirmbruchner</a
+                >
+                <p class="text-sm text-slate-600">
+                  RRHH de Calzetta Neumaticos S.A.
+                </p>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-slate-50 p-6 rounded-xl shadow-lg border border-slate-200 text-left testimonial-card"
+            >
+              <div>
+                <div class="flex items-center mb-4">
+                  <span class="text-xl text-yellow-500">★★★★★</span>
+                  <p class="ml-2 text-slate-600 font-medium">
+                    Calidad en el trato humano
+                  </p>
+                </div>
+                <p
+                  class="italic text-lg text-slate-700 mb-4 readable-paragraph"
+                >
+                  “Lo que más destaco es la calidad del trato humano: cercanos,
+                  atentos y comprometidos, algo que marca la diferencia en la
+                  relación con un estudio contable. Siempre están disponibles
+                  para responder dudas, acompañar decisiones y ofrecer
+                  soluciones a medida. Los recomiendo con total confianza.”
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/mariana-valente-19262723/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-slate-800 hover:text-blue-600 transition duration-300 block"
+                  >- Mariana Valente</a
+                >
+                <p class="text-sm text-slate-600">
+                  Finance Lead at Adila Fin & Pay
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="blog"
+        class="relative py-16 md:py-20 px-4 bg-gradient-to-r from-sky-100 to-blue-100"
+      >
+        <div
+          class="container mx-auto section-content-container p-8 rounded-xl shadow-lg border border-sky-200 relative z-10"
+        >
+          <h2 class="text-3xl font-bold text-custom-orange mb-4 text-center">
+            Nuestro Blog: Tu Fuente de Información
+          </h2>
+          <div class="max-w-xl mx-auto text-left">
+            <p class="text-lg text-slate-700 mb-8">
+              Para potenciar el crecimiento de tu empresa accede y actualizate:
+            </p>
+            <div class="space-y-3 mb-8">
+              <p class="text-slate-700 flex items-center">
+                <i class="fas fa-newspaper text-xl text-custom-orange mr-3"></i>
+                últimas noticias del sector
+              </p>
+              <p class="text-slate-700 flex items-center">
+                <i class="fas fa-handshake text-xl text-custom-orange mr-3"></i>
+                acuerdos salariales por cct
+              </p>
+              <p class="text-slate-700 flex items-center">
+                <i class="fas fa-lightbulb text-xl text-custom-orange mr-3"></i>
+                consejos prácticos para tu gestión
+              </p>
+              <p class="text-slate-700 flex items-center">
+                <i
+                  class="fas fa-calculator text-xl text-custom-orange mr-3"
+                ></i>
+                calculadoras y otras herramientas
+              </p>
+              <p class="text-slate-700 flex items-center">
+                <i class="fas fa-book-open text-xl text-custom-orange mr-3"></i>
+                guías especializadas
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <a
+              href="https://blog-estudio-capobianco.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-custom-orange text-white font-bold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-custom-orange-dark transition duration-300 transform hover:scale-105"
+            >
+              Acceder al Blog
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contacto"
+        class="py-16 md:py-20 px-4 bg-gradient-to-r from-sky-700 to-blue-600 text-white"
+      >
+        <div
+          class="container mx-auto section-content-container text-center max-w-2xl"
+        >
+          <h2 class="text-3xl font-bold mb-4">
+            ¿Listo para Optimizar la Gestión de su empresa?
+          </h2>
+          <p class="text-lg mb-8 opacity-90 readable-paragraph">
+            Contáctenos hoy mismo para una consulta personalizada sin cargo y
+            descubra cómo podemos ayudar a su empresa a crecer.
+          </p>
+
+          <form
+            id="contactForm"
+            class="bg-white p-8 rounded-xl shadow-lg text-left"
+          >
+            <div class="mb-5">
+              <label
+                for="name"
+                class="block text-slate-700 text-sm font-semibold mb-2"
+                >Nombre Completo</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                required
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="email"
+                class="block text-slate-700 text-sm font-semibold mb-2"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                required
+              />
+            </div>
+            <div class="mb-5">
+              <label
+                for="phone"
+                class="block text-slate-700 text-sm font-semibold mb-2"
+                >Teléfono (Opcional)</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-slate-700 text-sm font-semibold mb-2"
+                >Su Mensaje</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-custom-orange text-white font-bold py-3 px-4 rounded-lg hover:bg-custom-orange-dark transition duration-300 shadow-md"
+            >
+              Enviar Consulta
+            </button>
+            <div
+              id="form-message"
+              class="mt-4 text-center text-sm text-slate-800"
+            ></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#040504] text-white pt-16 pb-12 px-4">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center md:items-end justify-between"
+      >
+        <!-- Logo on Left -->
+        <div
+          class="mb-4 md:mb-0 md:mr-6 flex justify-center md:justify-start w-full md:w-auto self-center"
+        >
+          <img
+            src="./assets/img/logo-o-black.png"
+            alt="Estudio Capobianco Logo"
+            class="h-44 w-auto object-contain"
+          />
+        </div>
+
+        <!-- Centered Contact Info (Social + Address + Copyright) -->
+        <div
+          class="flex flex-col items-center md:flex-1 md:text-center self-end mb-8 md:mb-0"
+        >
+          <div class="flex flex-wrap justify-center items-center gap-6 mb-4">
+            <!-- Social Icons -->
+            <a
+              href="https://www.instagram.com/estudio_capobianco/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-instagram text-3xl"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vscapobianco/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a
+              href="mailto:info@estudiocapobianco.com.ar"
+              class="text-slate-400 hover:text-white transition duration-300"
+            >
+              <i class="fas fa-envelope-square text-3xl"></i>
+            </a>
+            <a
+              href="https://wa.me/541132158576"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-400 hover:text-white transition duration-300"
+            >
+              <i class="fab fa-whatsapp-square text-3xl"></i>
+            </a>
+          </div>
+          <a
+            href="https://maps.app.goo.gl/ri5gpcb9daSDuNms6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-slate-400 hover:text-white transition duration-300 flex items-center mb-2 md:mb-1"
+          >
+            <i class="fas fa-map-marker-alt text-3xl mr-2"></i> Av. Rivadavia
+            8639, Buenos Aires, Argentina
+          </a>
+          <p class="text-slate-400 text-sm text-center md:text-center">
+            &copy; 2025 - Estudio Capobianco. Todos los derechos reservados.
+          </p>
+        </div>
+
+        <!-- Column 3: New Content - Quick Links -->
+        <div class="w-full md:w-auto text-center md:text-left self-end">
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#servicios"
+                class="text-slate-400 hover:text-white transition duration-300"
+                >Nuestros Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="#nosotros"
+                class="text-slate-400 hover:text-white transition duration-300"
+                >Quiénes Somos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="text-slate-400 hover:text-white transition duration-300"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                class="text-slate-400 hover:text-white transition duration-300"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-slate-400 hover:text-white transition duration-300"
+                >Política de Privacidad</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating AI Consultation Panel -->
+    <div
+      id="ai-consultation-panel"
+      class="fixed ai-panel-hidden top-0 bottom-0 w-full md:w-[400px] bg-white shadow-2xl z-[100] p-6 transition-all duration-500 ease-in-out overflow-y-auto border-l border-slate-200"
+    >
+      <button
+        id="close-ai-panel"
+        class="absolute top-4 right-4 text-slate-500 hover:text-slate-800 text-2xl font-bold"
+      >
+        &times;
+      </button>
+      <h2 class="text-2xl font-bold text-custom-orange mb-6 text-center">
+        Consulta a Nuestros Expertos IA ✨
+      </h2>
+      <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+        <p class="text-lg text-slate-700 mb-6 readable-paragraph">
+          Realiza una pregunta general sobre liquidación de sueldos, cargas
+          sociales, normativa laboral o gestión de RRHH y obtén una respuesta
+          informativa al instante.
+        </p>
+        <!-- Lead Capture Fields -->
+        <div class="mb-4">
+          <label
+            for="ai-name"
+            class="block text-slate-700 text-sm font-semibold mb-2 text-left"
+            >Nombre Completo:</label
+          >
+          <input
+            type="text"
+            id="ai-name"
+            name="ai-name"
+            class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+            required
+          />
+        </div>
+        <div class="mb-5">
+          <label
+            for="ai-email"
+            class="block text-slate-700 text-sm font-semibold mb-2 text-left"
+            >Correo Electrónico:</label
+          >
+          <input
+            type="email"
+            id="ai-email"
+            name="ai-email"
+            class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+            required
+          />
+        </div>
+        <!-- End Lead Capture Fields -->
+        <div class="mb-5">
+          <label
+            for="ai-question"
+            class="block text-slate-700 text-sm font-semibold mb-2 text-left"
+            >Tu Pregunta:</label
+          >
+          <textarea
+            id="ai-question"
+            rows="4"
+            class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+            placeholder="Ej: ¿Cuáles son los últimos cambios en la liquidación de sueldos en Argentina?"
+          ></textarea>
+        </div>
+        <button
+          id="ask-ai-button"
+          class="w-full bg-custom-orange text-white font-bold py-3 px-4 rounded-lg hover:bg-custom-orange-dark transition duration-300 shadow-md"
+        >
+          Obtener Respuesta ✨
+        </button>
+        <div
+          id="ai-response-area"
+          class="mt-8 p-6 bg-white rounded-lg border border-slate-200 text-left hidden"
+        >
+          <p class="font-semibold text-slate-800 mb-2">
+            Respuesta del Experto IA:
+          </p>
+          <div
+            id="ai-response-content"
+            class="text-slate-700 leading-relaxed"
+          ></div>
+        </div>
+        <p id="ai-loading" class="text-slate-600 mt-4 hidden">
+          Generando respuesta... 🚀
+        </p>
+        <p class="text-sm text-slate-500 mt-4 text-left">
+          <span class="font-semibold">Importante:</span> Esta respuesta es
+          generada por IA y es de carácter informativo general. Para
+          asesoramiento específico y adaptado a tu situación, te invitamos a
+          contactar a nuestros profesionales.
+        </p>
+      </div>
+    </div>
+
+    <!-- Floating Trigger Button (Tab-like) -->
+    <button
+      id="open-ai-panel"
+      class="fixed bottom-20 right-0 transform translate-x-[calc(100%-20px)] bg-custom-orange text-white py-2 px-3 rounded-l-lg shadow-lg z-50 flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-in-out hover:translate-x-0"
+    >
+      <i class="fas fa-robot text-lg"></i>
+      <span class="text-sm font-bold mt-0.5">IA</span>
+    </button>
+
+    <script src="./assets/main.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
