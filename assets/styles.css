@@ -181,3 +181,61 @@ section[id] {
     justify-content: space-between;
     height: 100%;
 }
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 160px; /* Position above AI button (80px + 80px) */
+    right: 0; /* Align to the right edge */
+    width: 70px; /* Same width as AI tab */
+    height: 70px; /* Same height as AI tab */
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    /* Applying the same border radius as AI button */
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 99; /* Same z-index as AI tab */
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.3s;
+    transform: translateX(calc(100% - 20px)); /* Initially show only 20px */
+    padding: 0;
+    text-decoration: none; /* Remove underline from link */
+}
+
+#whatsapp-button i {
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+#whatsapp-button span {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+#whatsapp-button:hover {
+    transform: translateX(0); /* Fully reveal on hover */
+    background-color: #1DA851; /* Darker green on hover */
+}
+
+/* Responsive adjustments for both floating buttons */
+@media (max-width: 768px) {
+    /* ... */
+    #whatsapp-button {
+        bottom: 90px; /* Position above AI button on smaller screens */
+        width: 60px;
+        height: 60px;
+        transform: translateX(calc(100% - 15px));
+    }
+    #whatsapp-button i {
+        font-size: 1.4rem;
+    }
+    #whatsapp-button span {
+        font-size: 0.65rem;
+    }
+}
