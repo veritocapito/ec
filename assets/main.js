@@ -155,30 +155,24 @@
         aiResponseContent.textContent = '';
 
         try {
-            let chatHistory = [];
-            chatHistory.push({ role: "user", parts: [{ text: `El usuario ${name} (${email}) pregunta: Responde brevemente a esta pregunta sobre contabilidad, liquidación de sueldos o recursos humanos en Argentina. Si no sabes la respuesta o es muy específica, indica que se requiere una consulta profesional. Pregunta: "${question}"` }] });
-            const payload = { contents: chatHistory };
-            const apiKey = ""; // Canvas will automatically provide it in runtime
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-            const response = await fetch(apiUrl, {
+            // ¡Importante! Ahora llamamos a nuestro script PHP en el servidor Hostinger
+            const response = await fetch('./gemini_proxy.php', { // <--- ¡CAMBIO AQUÍ!
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                // Enviamos nombre, email y pregunta a nuestro proxy PHP
+                body: JSON.stringify({ name, email, question }) // <--- ¡CAMBIO AQUÍ!
             });
 
             const result = await response.json();
 
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                const text = result.candidates[0].content.parts[0].text;
-                aiResponseContent.textContent = text;
+            if (response.ok && result.response) { // Verificamos si la respuesta del proxy es exitosa
+                aiResponseContent.textContent = result.response; // La respuesta real viene en result.response
             } else {
+                console.error('Error del proxy PHP o estructura inesperada:', result.error || result);
                 aiResponseContent.textContent = 'Lo siento, no pude generar una respuesta en este momento. Por favor, intenta de nuevo o contáctanos para una consulta profesional.';
             }
         } catch (error) {
-            console.error('Error al llamar a la API de Gemini:', error);
+            console.error('Error al llamar al proxy PHP:', error);
             aiResponseContent.textContent = 'Hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde.';
         } finally {
             aiLoading.classList.add('hidden');
